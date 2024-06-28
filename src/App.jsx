@@ -4,6 +4,12 @@ import { useEffect, useState } from 'react';
 
 const App = () => {
 
+  const myStyle = {
+    textAlign : "center",
+    color: "#fff"
+
+  }
+
   const [todos, setTodos] = useState([])
   const [todoValue, setTodoValue] = useState('')
 
@@ -50,6 +56,7 @@ const App = () => {
 
   return (
     <>
+    <h1 style={myStyle}>Todox - make your life easy</h1>
       <TodoInput handleAddTodo={handleAddTodo} todoValue={todoValue} setTodoValue={setTodoValue} />
       <TodoList todos={todos} handleDeleteTodo={handleDeleteTodo} handleEditTodo={handleEditTodo} />
     </>
